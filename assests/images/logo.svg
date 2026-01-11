@@ -1,0 +1,12 @@
+<svg width="250" height="280" viewBox="0 0 250 280" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main thinking bubble -->
+  <circle cx="125" cy="110" r="95" fill="#E8F4F8" stroke="#86BACD" stroke-width="3"/>
+  
+  <!-- Small bubbles for thinking bubble effect -->
+  <circle cx="70" cy="185" r="20" fill="#E8F4F8" stroke="#86BACD" stroke-width="2.5"/>
+  <circle cx="50" cy="220" r="14" fill="#E8F4F8" stroke="#86BACD" stroke-width="2"/>
+  <circle cx="38" cy="250" r="9" fill="#E8F4F8" stroke="#86BACD" stroke-width="1.5"/>
+  
+  <!-- CS text inside bubble -->
+  <text x="125" y="135" font-family="Arial, sans-serif" font-size="72" font-weight="bold" text-anchor="middle" fill="#123B46">CS</text>
+</svg>
