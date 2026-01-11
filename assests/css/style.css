@@ -85,6 +85,61 @@
     }
 }
 
+/* Footer / Contact  */
+#contact, .site-footer {
+    background-color: var(--primary-color, #6B9DB4);
+    color: white;
+    padding: 12px 0; /* compact */
+}
+
+#contact h2, .site-footer h2, #contact .h5 {
+    color: white;
+    margin: 0 0 6px 0;
+    font-weight: 600;
+}
+
+#contact .sub-heading-color {
+    color: var(--highlight-color-light, #A8D5E2);
+}
+
+/* icon styles */
+#contact i {
+    color: var(--secondary-color, #81D4FA);
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+#contact .social-links i {
+    color: var(--highlight-color-light, #FFFFFF);
+    font-size: 1.6rem;
+    transition: color 0.25s ease-in-out;
+}
+
+#contact .social-links a {
+    color: inherit; /* keep inherited color */
+}
+
+#contact .social-links i:hover,
+#contact .social-links a:hover i {
+    color: var(--secondary-color, #4FC3F7);
+}
+
+/* table-dark neutralization if used */
+#contact .table-dark * {
+    background-color: transparent;
+}
+
+/* smaller text in compact footer */
+#contact small, #contact p {
+    color: rgba(255,255,255,0.9);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+@media (max-width: 575px) {
+    #contact .social-links i { font-size: 1.4rem; }
+}
+
 @media (max-width: 480px) {
     .hero {
         height: 300px;
@@ -93,4 +148,36 @@
     .hero-content h1 {
         font-size: 1.5rem;
     }
+}
+
+/* Page layout: keep footer at viewport bottom when content is short */
+html, body {
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 70px; /* make room for fixed navbar */
+}
+.site-main {
+    flex: 1 0 auto;
+}
+#contact, .site-footer {
+    flex-shrink: 0;
+}
+
+/* Make footer text smaller and more compact */
+#contact h2, #contact .h5 {
+    font-size: 1rem;
+}
+#contact small, #contact p {
+    font-size: 0.85rem;
+}
+
+/* Center social icons vertically */
+#contact .social-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
