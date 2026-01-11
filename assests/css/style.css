@@ -1,7 +1,47 @@
+/* CSS Variables */
+:root {
+    --primary-font: 'Inter', sans-serif;
+    --secondary-font: 'Macondo', cursive;
+    --primary-color: #123B46; /*deep teal - primary text color*/
+    --secondary-color: #4FA6B3; /*soft teal - accents*/
+    --highlight-color: #86BACD; /* match navbar/footer */
+    --highlight-color-light: #BFEFF6; /* lighter accent */
+}
+
+/* Global Styles */
+body {
+    font-family: var(--primary-font);
+    padding-top: 57.15px; /* to prevent content being hidden behind fixed navbar */
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--secondary-font);
+    color: var(--primary-color);
+}
+
+h1, 
+h2 {
+     text-transform: uppercase;
+}
+
+h2 {
+    margin-bottom: 2rem;
+}
+
+.sub-heading-color {
+    color: var(--highlight-color);
+}
+ 
+.section {
+    padding-top: 4rem; /* prevent navbar overlap*/
+}
+
 /* Navigation */
 #navbar {
-    background-color: rgba(107, 157, 180, 0.95);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--highlight-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .navbar-brand {
@@ -23,21 +63,21 @@
 }
 
 .navbar-nav .nav-link:hover {
-    color: #81D4FA !important;
+    color: var(--highlight-color-light) !important;
 }
 
 .custom-button-filled {
-    background-color: #81D4FA;
-    color: #37474F !important;
+    background-color: var(--highlight-color-light);
+    color: var(--primary-color) !important;
     border: none;
     padding: 0.5rem 1.5rem;
     border-radius: 25px;
     font-weight: 600;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.25s ease;
 }
 
 .custom-button-filled:hover {
-    background-color: #4FC3F7;
+    background-color: var(--highlight-color);
 }
 
 /* Hero Section */
@@ -87,9 +127,9 @@
 
 /* Footer / Contact  */
 #contact, .site-footer {
-    background-color: var(--primary-color, #6B9DB4);
+    background-color: var(--highlight-color); /* match variable */
     color: white;
-    padding: 12px 0; /* compact */
+    padding: 8px 0; /* more compact */
 }
 
 #contact h2, .site-footer h2, #contact .h5 {
@@ -104,15 +144,15 @@
 
 /* icon styles */
 #contact i {
-    color: var(--secondary-color, #81D4FA);
-    font-size: 1.2rem;
+    color: var(--highlight-color-light); /* icon color from variable */
+    font-size: 1.1rem;
     margin-right: 10px;
 }
 
 #contact .social-links i {
-    color: var(--highlight-color-light, #FFFFFF);
+    color: #FFFFFF;
     font-size: 1.6rem;
-    transition: color 0.25s ease-in-out;
+    transition: color 0.2s ease-in-out;
 }
 
 #contact .social-links a {
@@ -121,7 +161,7 @@
 
 #contact .social-links i:hover,
 #contact .social-links a:hover i {
-    color: var(--secondary-color, #4FC3F7);
+    color: var(--highlight-color-light); /* hover */
 }
 
 /* table-dark neutralization if used */
