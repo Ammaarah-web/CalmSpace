@@ -114,11 +114,6 @@ h2 {
     color: black;
 }
 
-/* Ensure hero paragraph text is black and overrides other rules if needed */
-.hero-content p {
-    color: black !important;
-}
-
 /* Hero overlay buttons */
 .hero-buttons {
     margin-top: 1.25rem;
