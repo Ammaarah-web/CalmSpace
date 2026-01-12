@@ -114,6 +114,56 @@ h2 {
     color: black;
 }
 
+/* Hero overlay buttons */
+.hero-buttons {
+    margin-top: 1.25rem;
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 0.65rem 1.25rem;
+    border-radius: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
+    z-index: 3;
+}
+
+.hero-button-primary {
+    background-color: rgba(255,255,255,0.95);
+    color: var(--primary-color);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.hero-button-secondary {
+    background-color: rgba(255,255,255,0.95);
+    color: var(--primary-color);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    border: none;
+}
+
+.hero-button:hover {
+    transform: translateY(-2px);
+    opacity: 0.98;
+}
+
+@media (max-width: 768px) {
+    .hero-buttons {
+        flex-direction: column;
+        gap: 0.6rem;
+    }
+    .hero-button {
+        width: 80%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero {
