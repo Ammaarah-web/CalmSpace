@@ -321,40 +321,4 @@ body {
     .helpline-card { min-height: 140px; }
 }
 
-/* Make Learn More / About cards smaller and more compact */
-.about .card {
-    max-width: 360px;
-    width: 100%;
-    margin: 0.5rem auto;
-    border-radius: 10px;
-    box-shadow: 0 6px 14px rgba(18,59,70,0.06);
-}
-
-.about .card {
-    max-width: 360px;
-    width: 100%;
-    margin: 0.4rem auto;
-    border-radius: 10px;
-    box-shadow: 0 6px 14px rgba(18,59,70,0.06);
-    max-height: 220px;
-    overflow: hidden;
-}
-.about .card-img-top {
-    height: 100px; /* reduced height */
-    object-fit: cover;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-.about .card-body {
-    padding: 0.6rem 0.8rem; /* tighter padding */
-}
-.about .card-title {
-    font-size: 1rem;
-    margin-bottom: 0.25rem;
-}
-.about .card-text {
-    font-size: 0.9rem;
-    margin-bottom: 0.4rem;
-    line-height: 1.2;
-}
-}
+/* Learn More card overrides removed */
