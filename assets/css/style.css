@@ -3,7 +3,7 @@
 /* CSS Variables */
 :root {
     --primary-font: 'Archivo', sans-serif;
-    --secondary-font: 'Archivo', cursive;
+    --secondary-font: 'Archivo', sans-serif; 
     --primary-color: #123B46; /*deep teal - primary text color*/
     --secondary-color: #4FA6B3; /*soft teal - accents*/
     --highlight-color: #86BACD; /* match navbar/footer */
