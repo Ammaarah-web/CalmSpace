@@ -164,6 +164,30 @@ h2 {
     }
 }
 
+/* Learn More Cards */
+.learn-card {
+    max-width: 280px;
+    margin: 0 auto;
+}
+
+.learn-card-img {
+    
+    object-fit: cover;
+}
+
+.learn-card .card-title {
+    font-size: 1rem;
+}
+
+.learn-card .card-text {
+    font-size: 0.875rem;
+}
+
+.learn-card .btn {
+    font-size: 0.875rem;
+    padding: 0.375rem 0.75rem;
+}
+
 /* Helplines section */
 .helplines {
     background: linear-gradient(180deg, rgba(75,148,159,0.06), rgba(75,148,159,0.03));
