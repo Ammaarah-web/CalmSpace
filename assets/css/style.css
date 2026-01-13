@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* CSS Variables */
 :root {
-    --primary-font: 'Inter', sans-serif;
-    --secondary-font: 'Macondo', cursive;
+    --primary-font: 'Archivo', sans-serif;
+    --secondary-font: 'Archivo', cursive;
     --primary-color: #123B46; /*deep teal - primary text color*/
     --secondary-color: #4FA6B3; /*soft teal - accents*/
     --highlight-color: #86BACD; /* match navbar/footer */
