@@ -164,6 +164,55 @@ h2 {
     }
 }
 
+/* Helplines section */
+.helplines {
+    background: linear-gradient(180deg, rgba(75,148,159,0.06), rgba(75,148,159,0.03));
+    padding: 3.5rem 0;
+}
+
+.helplines h2 {
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+
+.helpline-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.25rem;
+    box-shadow: 0 8px 20px rgba(18,59,70,0.06);
+    text-align: center;
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.helpline-title {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.helpline-number {
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.helpline-link {
+    color: var(--secondary-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.helpline-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .helpline-card { min-height: 140px; }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero {
@@ -272,53 +321,3 @@ body {
     gap: 12px;
 }
 
-/* Helplines section */
-.helplines {
-    background: linear-gradient(180deg, rgba(75,148,159,0.06), rgba(75,148,159,0.03));
-    padding: 3.5rem 0;
-}
-
-.helplines h2 {
-    color: var(--primary-color);
-    margin-bottom: 0.25rem;
-}
-
-.helpline-card {
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 1.25rem;
-    box-shadow: 0 8px 20px rgba(18,59,70,0.06);
-    text-align: center;
-    min-height: 160px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.helpline-title {
-    font-size: 1.125rem;
-    margin-bottom: 0.5rem;
-    color: var(--primary-color);
-}
-
-.helpline-number {
-    font-weight: 700;
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-}
-
-.helpline-link {
-    color: var(--secondary-color);
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.helpline-link:hover {
-    text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-    .helpline-card { min-height: 140px; }
-}
-
-/* Learn More card overrides removed */
