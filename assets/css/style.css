@@ -187,12 +187,12 @@ h2 {
     font-size: 0.875rem;
     padding: 0.375rem 0.75rem;
 }
-.support {
+.support-section {
     background: linear-gradient(180deg, rgba(75,148,159,0.06), rgba(75,148,159,0.03));
     padding: 3.5rem 0;
 }
 
-.support{
+.support-section h2{
     color: var(--primary-color);
     margin-bottom: 0.25rem;
 }
