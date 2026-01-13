@@ -38,6 +38,10 @@ h2 {
     padding-top: 4rem; /* prevent navbar overlap*/
 }
 
+:target {
+    scroll-margin-top: 90px; /* keep h2 visible under the fixed navbar */
+}
+
 /* Navigation */
 #navbar {
     background-color: var(--highlight-color);
