@@ -185,6 +185,27 @@
             </div>
         </div>
 
+        <!-- Managing stress -->
+
+    <div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="..." class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Managing stress</h5>
+        <p class="card-text">Managing stress is about recognising when you feel overwhelmed and using healthy strategies, 
+            such as breathing, time management, and taking breaks, to regain balance. Learning to manage stress can 
+            improve your wellbeing, focus, and emotional resilience.
+Watch the video below to learn more about managing stress effectively.
+</p>
+        
+              
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
@@ -258,20 +279,38 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
     </script>
-
+<!-- Bootstrap js for modal to open video and text for learn more and managing stress cards-->
     <script>
-        const infoModal = document.getElementById('infoModal');
+const modal = document.getElementById('infoModal');
 
-        infoModal.addEventListener('show.bs.modal', event => {
-            const button = event.relatedTarget;
+modal.addEventListener('show.bs.modal', function (event) {
+  const button = event.relatedTarget;
+  const type = button.getAttribute('data-type');
+  const title = button.getAttribute('data-title');
 
-            const title = button.getAttribute('data-title');
-            const content = button.getAttribute('data-content');
+  modal.querySelector('.modal-title').textContent = title;
 
-            document.getElementById('modalTitle').innerHTML = title;
-            document.getElementById('modalBody').innerHTML = content;
-        });
-    </script>
+  if (type === 'video') {
+    const video = button.getAttribute('data-video');
+    modal.querySelector('.modal-body').innerHTML = `
+      <iframe width="100%" height="315"
+        src="${video}"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>`;
+  } else {
+    const content = button.getAttribute('data-content');
+    modal.querySelector('.modal-body').textContent = content;
+  }
+});
+
+// Stop video on close
+modal.addEventListener('hidden.bs.modal', function () {
+  modal.querySelector('.modal-body').innerHTML = '';
+});
+</script>
+
 
     <!--Font Awesome kit -->
     <script>
