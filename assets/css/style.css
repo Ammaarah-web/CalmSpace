@@ -3,11 +3,9 @@
 /* CSS Variables */
 :root {
     --primary-font: 'Archivo', sans-serif;
-    --secondary-font: 'Archivo', sans-serif; 
-    --primary-color: #123B46; /*deep teal - primary text color*/
-    --secondary-color: #4FA6B3; /*soft teal - accents*/
-    --highlight-color: #86BACD; /* match navbar/footer */
-    --highlight-color-light: #BFEFF6; /* lighter accent */
+    --primary-color: #123B46;
+    --highlight-color: #86BACD;
+    --highlight-color-light: #BFEFF6;
 }
 
 /* Global Styles */
@@ -16,10 +14,16 @@ body {
     padding-top: 57.15px; /* to prevent content being hidden behind fixed navbar */
 }
 
+/* Responsive Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 h1,
 h2,
 h3 {
-    font-family: var(--secondary-font);
     color: var(--primary-color);
 }
 
@@ -34,10 +38,6 @@ h2 {
 
 .sub-heading-color {
     color: var(--highlight-color);
-}
- 
-.section {
-    padding-top: 4rem; /* prevent navbar overlap*/
 }
 
 :target {
@@ -103,6 +103,14 @@ h2 {
     height: 100%;
     object-fit: cover;
     z-index: 1;
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .hero-image {
+        object-position: center;
+    }
 }
 
 .hero-content {
@@ -177,25 +185,11 @@ h2 {
 }
 
 .learn-card-img {
-    
+    width: 100%;
+    height: 200px;
     object-fit: cover;
+    object-position: center bottom;
 }
-
-.learn-card .card-title {
-    font-size: 1rem;
-}
-
-.learn-card .card-text {
-    font-size: 0.875rem;
-}
-
-.learn-card .btn {
-    font-size: 0.875rem;
-    padding: 0.375rem 0.75rem;
-}
-
-
-
 
 /* Helplines section */
 .helplines {
@@ -233,7 +227,7 @@ h2 {
 }
 
 .helpline-link {
-    color: var(--secondary-color);
+    color: #4FA6B3;
     font-weight: 600;
     text-decoration: none;
 }
@@ -274,13 +268,6 @@ h2 {
     color: var(--highlight-color-light, #A8D5E2);
 }
 
-/* icon styles */
-#contact i {
-    color: var(--highlight-color-light); /* icon color from variable */
-    font-size: 1.1rem;
-    margin-right: 10px;
-}
-
 #contact .social-links i {
     color: #FFFFFF;
     font-size: 1.6rem;
@@ -293,15 +280,9 @@ h2 {
 
 #contact .social-links i:hover,
 #contact .social-links a:hover i {
-    color: var(--highlight-color-light); /* hover */
+    color: var(--highlight-color-light);
 }
 
-/* table-dark neutralization if used */
-#contact .table-dark * {
-    background-color: transparent;
-}
-
-/* smaller text in compact footer */
 #contact small, #contact p {
     color: rgba(255,255,255,0.9);
     font-size: 0.95rem;
