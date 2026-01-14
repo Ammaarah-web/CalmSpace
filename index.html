@@ -227,7 +227,7 @@
     <input type="text" class="form-control" id="exampleInputname1" required>
   </div>
 
-    <button type=button class="btn custom-button-filled ms-lg-3" data-bs-toggle="modal"
+    <button type =button class="btn custom-button-filled ms-lg-3" data-bs-toggle="modal"
                                 data-bs-target="#infoModal" data-title="" data-content="
              Your request has been saved. You will receive a Zoom link via email shortly.
             ">
@@ -340,6 +340,43 @@
         });
     </script>
 
+    <!-- Support Form Validation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const supportForm = document.getElementById('supportForm');
+            const supportFormBtn = document.getElementById('supportFormBtn');
+            
+            if (supportForm && supportFormBtn) {
+                supportFormBtn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    // Check if form is valid
+                    if (supportForm.checkValidity()) {
+                        // Form is valid, show the modal
+                        const modalTitle = supportFormBtn.getAttribute('data-title');
+                        const modalContent = supportFormBtn.getAttribute('data-content');
+                        
+                        // Update modal content
+                        const modal = document.getElementById('infoModal');
+                        if (modal) {
+                            modal.querySelector('.modal-title').textContent = modalTitle;
+                            modal.querySelector('.modal-body').textContent = modalContent;
+                        }
+                        
+                        // Show the modal
+                        const bsModal = new bootstrap.Modal(document.getElementById('infoModal'));
+                        bsModal.show();
+                        
+                        // Reset form after showing modal
+                        supportForm.reset();
+                    } else {
+                        // Form is invalid, trigger browser validation UI
+                        supportForm.reportValidity();
+                    }
+                });
+            }
+        });
+    </script>
 
     <!--Font Awesome kit -->
     <script>
