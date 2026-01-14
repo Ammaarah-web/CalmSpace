@@ -216,7 +216,7 @@
         <div class="container shadow-lg p-4 rounded">
             <h2 class="mb-4">support sessions</h2>
             <p>We hold weekly online support sessions on Zoom that focus on mental health–related activities and practical exercises designed to support wellbeing. These sessions are not therapy, but gentle, supportive interventions such as mindfulness exercises, stress-management techniques, reflection activities, and discussions around self-care. If you’d like to join, simply enter your name and email address and you’ll receive a link to the Zoom meeting.</p>
-  <form>
+  <form id="supportForm">
             <div class="mb-3 p-4 rounded support-form">
     <label for="exampleInputEmail1" class="form-label" required>Email address</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
@@ -227,8 +227,7 @@
     <input type="text" class="form-control" id="exampleInputname1" required>
   </div>
 
-    <button type =button class="btn custom-button-filled ms-lg-3" data-bs-toggle="modal"
-                                data-bs-target="#infoModal" data-title="" data-content="
+    <button type="button" id="supportFormBtn" class="btn custom-button-filled ms-lg-3" data-title="" data-content="
              Your request has been saved. You will receive a Zoom link via email shortly.
             ">
                                 Send me a Zoom Link
